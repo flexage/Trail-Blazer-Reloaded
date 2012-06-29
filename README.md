@@ -1,7 +1,7 @@
+<img src="http://i.imgur.com/E4yP9.png" />
+
 Trail Blazer Reloaded
 =====================
-
-<img src="http://i.imgur.com/E4yP9.png" />
 
 Trail Blazer Reloaded is a totally rebuilt version of the Trail Blazer Movie Trailer downloader for the Media Browser project.
 
