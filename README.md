@@ -1,9 +1,9 @@
-TrailBlazer-Reloaded
-====================
+Trail Blazer Reloaded
+=====================
 
 <img src="http://i.imgur.com/E4yP9.png" />
 
-Trail BlazerReloaded is a totally rebuilt version of the TrailBlazer Movie Trailer downloader for the Media Browser project.
+Trail Blazer Reloaded is a totally rebuilt version of the Trail Blazer Movie Trailer downloader for the Media Browser project.
 
 The main aim of this project is to rebuild and extend the functionality of the original project, with more maintainable code, along with support for a number of additional providers other than HD-Trailers.net.
 
