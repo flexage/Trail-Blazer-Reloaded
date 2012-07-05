@@ -9,11 +9,8 @@ namespace TrailBlazerReloaded
     {
         public Config ConfigFile;
         private readonly List<string> _folderpath = new List<string>();
-        private readonly List<Config.Definition> _def = new List<Config.Definition>(); 
-        /*
-                private readonly string[] _defaultPath = new string [1] { "C:\\thereisnowaythispathexists\\" };
-        */
-
+        private readonly List<Config.Definition> _def = new List<Config.Definition>();
+        private readonly List<Config.Provider> _provider = new List<Config.Provider>(); 
 
         public ConfigForm(Config config)
         {
@@ -53,8 +50,22 @@ namespace TrailBlazerReloaded
             }
 
             ConfigFile.DefinitionsCollection = _def.ToArray();
+        }
 
-            //_configFile.DefinitionsCollection = _definitions;
+        private void SaveProviders()
+        {
+            for (var i = 0; i < checkedListBoxProviders.Items.Count; i++)
+            {
+                var provider = new Config.Provider
+                {
+                    Name = checkedListBoxProviders.Items[i].ToString(),
+                    Active = checkedListBoxProviders.GetItemChecked(i)
+                };
+
+                _provider.Add(provider);
+            }
+
+            ConfigFile.ProvidersCollection = _provider.ToArray();
         }
 
         private void SaveTrailerFolder()
@@ -86,6 +97,11 @@ namespace TrailBlazerReloaded
             {
                 checkedlistboxDefinitions.Items.Add(def.Type, def.Active);
             }
+
+            foreach (var provider in ConfigFile.ProvidersCollection)
+            {
+                checkedListBoxProviders.Items.Add(provider.Name, provider.Active);
+            }
         }
 
         private void BtnSaveConfigClick(object sender, EventArgs e)
@@ -93,6 +109,7 @@ namespace TrailBlazerReloaded
 
             SaveCollection();
             SaveDefintion();
+            SaveProviders();
             SaveTrailerFolder();
             ConfigFile.WriteConfig(ConfigFile);
             Close();
@@ -158,33 +175,33 @@ namespace TrailBlazerReloaded
                 checkedlistboxDefinitions.SetItemCheckState(newIndex,CheckState.Checked);
         }
 
-        public void MoveItemWebsite(int direction)
+        public void MoveItemProviders(int direction)
         {
             // Checking selected item
-            if (checkedlistboxDefinitions.SelectedItem == null || checkedlistboxDefinitions.SelectedIndex < 0)
+            if (checkedListBoxProviders.SelectedItem == null || checkedListBoxProviders.SelectedIndex < 0)
                 return; // No selected item - nothing to do
 
             //Check for checked
-            var _checked = checkedlistboxDefinitions.GetItemChecked(checkedlistboxDefinitions.SelectedIndex);
+            var _checked = checkedListBoxProviders.GetItemChecked(checkedListBoxProviders.SelectedIndex);
 
             // Calculate new index using move direction
-            int newIndex = checkedlistboxDefinitions.SelectedIndex + direction;
+            int newIndex = checkedListBoxProviders.SelectedIndex + direction;
 
             // Checking bounds of the range
-            if (newIndex < 0 || newIndex >= checkedlistboxDefinitions.Items.Count)
+            if (newIndex < 0 || newIndex >= checkedListBoxProviders.Items.Count)
                 return; // Index out of range - nothing to do
 
-            object selected = checkedlistboxDefinitions.SelectedItem;
+            object selected = checkedListBoxProviders.SelectedItem;
 
             // Removing removable element
-            checkedlistboxDefinitions.Items.Remove(selected);
+            checkedListBoxProviders.Items.Remove(selected);
             // Insert it in new position
-            checkedlistboxDefinitions.Items.Insert(newIndex, selected);
+            checkedListBoxProviders.Items.Insert(newIndex, selected);
             // Restore selection
-            checkedlistboxDefinitions.SetSelected(newIndex, true);
+            checkedListBoxProviders.SetSelected(newIndex, true);
 
             if (_checked)
-                checkedlistboxDefinitions.SetItemCheckState(newIndex, CheckState.Checked);
+                checkedListBoxProviders.SetItemCheckState(newIndex, CheckState.Checked);
         }
 
         private void DownBtnClick(object sender, EventArgs e)
@@ -198,12 +215,12 @@ namespace TrailBlazerReloaded
 
         private void MoveDownWebsite_Click(object sender, EventArgs e)
         {
-            MoveItemWebsite(+1);
+            MoveItemProviders(+1);
         }
 
         private void MoveUpWebsite_Click(object sender, EventArgs e)
         {
-            MoveItemWebsite(-1);
+            MoveItemProviders(-1);
         }
 
         private void button3_Click(object sender, EventArgs e)

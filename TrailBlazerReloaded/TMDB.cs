@@ -49,9 +49,16 @@ namespace TrailBlazerReloaded
             if (noExist == false)
             {
                 TmdbMovieTrailers trailers = api.GetMovieTrailers(TmdbID);
-                if (trailers.youtube != null)
+                if (trailers != null)
                 {
-                    youtube = trailers.youtube;
+                    if (trailers.youtube != null)
+                    {
+                        youtube = trailers.youtube;
+                    }
+                    else
+                    {
+                        youtube = null;
+                    }
                 }
                 else
                 {

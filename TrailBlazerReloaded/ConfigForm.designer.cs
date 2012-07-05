@@ -39,18 +39,18 @@
             this.labelCollectionFolders = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.DefinitionDescription = new System.Windows.Forms.Label();
             this.down_btn = new System.Windows.Forms.Button();
             this.Up_btn = new System.Windows.Forms.Button();
             this.checkedlistboxDefinitions = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBoxProviders = new System.Windows.Forms.CheckedListBox();
             this.folderTop10 = new System.Windows.Forms.FolderBrowserDialog();
             this.btnSaveConfig = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.ProviderDescription = new System.Windows.Forms.Label();
             this.MoveDownWebsite = new System.Windows.Forms.Button();
             this.MoveUpWebsite = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.DefinitionDescription = new System.Windows.Forms.Label();
-            this.ProviderDescription = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -151,6 +151,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Trailer Definition Settings";
             // 
+            // DefinitionDescription
+            // 
+            this.DefinitionDescription.Location = new System.Drawing.Point(7, 20);
+            this.DefinitionDescription.Name = "DefinitionDescription";
+            this.DefinitionDescription.Size = new System.Drawing.Size(277, 34);
+            this.DefinitionDescription.TabIndex = 6;
+            this.DefinitionDescription.Text = "Check the trailer definitions you would like to download. Use the arrows to set y" +
+                "our preferred order.";
+            this.DefinitionDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // down_btn
             // 
             this.down_btn.Location = new System.Drawing.Point(159, 102);
@@ -179,13 +189,13 @@
             this.checkedlistboxDefinitions.Size = new System.Drawing.Size(104, 64);
             this.checkedlistboxDefinitions.TabIndex = 2;
             // 
-            // checkedListBox1
+            // checkedListBoxProviders
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(13, 66);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(170, 64);
-            this.checkedListBox1.TabIndex = 3;
+            this.checkedListBoxProviders.FormattingEnabled = true;
+            this.checkedListBoxProviders.Location = new System.Drawing.Point(13, 66);
+            this.checkedListBoxProviders.Name = "checkedListBoxProviders";
+            this.checkedListBoxProviders.Size = new System.Drawing.Size(170, 64);
+            this.checkedListBoxProviders.TabIndex = 3;
             // 
             // btnSaveConfig
             // 
@@ -203,13 +213,23 @@
             this.groupBox3.Controls.Add(this.ProviderDescription);
             this.groupBox3.Controls.Add(this.MoveDownWebsite);
             this.groupBox3.Controls.Add(this.MoveUpWebsite);
-            this.groupBox3.Controls.Add(this.checkedListBox1);
+            this.groupBox3.Controls.Add(this.checkedListBoxProviders);
             this.groupBox3.Location = new System.Drawing.Point(310, 177);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(280, 145);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Trailer Provider Settings";
+            // 
+            // ProviderDescription
+            // 
+            this.ProviderDescription.Location = new System.Drawing.Point(2, 20);
+            this.ProviderDescription.Name = "ProviderDescription";
+            this.ProviderDescription.Size = new System.Drawing.Size(277, 34);
+            this.ProviderDescription.TabIndex = 8;
+            this.ProviderDescription.Text = "Check the trailer definitions you would like to download. Use the arrows to set y" +
+                "our preferred order.";
+            this.ProviderDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MoveDownWebsite
             // 
@@ -240,26 +260,6 @@
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // DefinitionDescription
-            // 
-            this.DefinitionDescription.Location = new System.Drawing.Point(7, 20);
-            this.DefinitionDescription.Name = "DefinitionDescription";
-            this.DefinitionDescription.Size = new System.Drawing.Size(277, 34);
-            this.DefinitionDescription.TabIndex = 6;
-            this.DefinitionDescription.Text = "Check the trailer definitions you would like to download. Use the arrows to set y" +
-                "our preferred order.";
-            this.DefinitionDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ProviderDescription
-            // 
-            this.ProviderDescription.Location = new System.Drawing.Point(2, 20);
-            this.ProviderDescription.Name = "ProviderDescription";
-            this.ProviderDescription.Size = new System.Drawing.Size(277, 34);
-            this.ProviderDescription.TabIndex = 8;
-            this.ProviderDescription.Text = "Check the trailer definitions you would like to download. Use the arrows to set y" +
-                "our preferred order.";
-            this.ProviderDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ConfigForm
             // 
@@ -303,7 +303,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button down_btn;
         private System.Windows.Forms.Button Up_btn;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBoxProviders;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button MoveDownWebsite;
         private System.Windows.Forms.Button MoveUpWebsite;

@@ -16,6 +16,7 @@ namespace TrailBlazerReloaded
         {
             CollectionPaths = null;
             DefinitionsCollection = new Definition[3];
+            ProvidersCollection = new Provider[2];
             TrailerPath = "";
         }
 
@@ -36,6 +37,20 @@ namespace TrailBlazerReloaded
 
         [XmlElement("Definition")]
         public Definition[] DefinitionsCollection { get; set; }
+
+
+
+        public class Provider
+        {
+            [XmlAttribute("active")]
+            public bool Active { get; set; }
+
+            [XmlText]
+            public string Name { get; set; }
+        }
+
+        [XmlElement("Provider")]
+        public Provider[] ProvidersCollection { get; set; }
 
 
 

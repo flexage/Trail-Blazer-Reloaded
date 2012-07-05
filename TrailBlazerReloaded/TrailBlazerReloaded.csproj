@@ -76,8 +76,17 @@
     <Reference Include="WatTmdb">
       <HintPath>..\Libraries\WatTmdb.dll</HintPath>
     </Reference>
+    <Reference Include="YoutubeExtractor">
+      <HintPath>..\Libraries\YoutubeExtractor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="Browser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +107,9 @@
       <DependentUpon>ConfigForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Trakt.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Browser.resx">
       <DependentUpon>Browser.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,11 +138,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="Resources\background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\splash.bmp" />
     <None Include="Resources\TrailBlazer-Reloaded---Splash-Screen-v1.png" />
+    <None Include="Resources\Document-32.png" />
+    <None Include="Resources\Down-32.png" />
+    <None Include="Resources\film-reel-icon.png" />
+    <None Include="Resources\film-strip-icon.png" />
+    <None Include="Resources\Play-32.png" />
+    <None Include="Resources\Refresh-32.png" />
+    <None Include="Resources\Save-32.png" />
+    <None Include="Resources\Star-32.png" />
+    <None Include="Resources\Tool-32.png" />
+    <None Include="Resources\TrailBlazer-Reloaded---About-Box.png" />
     <Content Include="trailblazer.ico" />
   </ItemGroup>
   <ItemGroup>

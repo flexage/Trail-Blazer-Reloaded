@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Browser));
             this.olvMovies = new BrightIdeasSoftware.ObjectListView();
-            this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumnTitle = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumnYear = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvColumnTrailerExists = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuItemFetch = new System.Windows.Forms.ToolStripMenuItem();
+            this.playTrailerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteTrailerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actionsPanel = new System.Windows.Forms.Panel();
             this.btnFetchAll = new System.Windows.Forms.Button();
             this.btnRefreshCollection = new System.Windows.Forms.Button();
@@ -45,22 +50,24 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apiTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.olvMovies)).BeginInit();
+            this.olvContextMenu.SuspendLayout();
             this.actionsPanel.SuspendLayout();
             this.menuMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // olvMovies
             // 
-            this.olvMovies.AllColumns.Add(this.olvColumn1);
-            this.olvMovies.AllColumns.Add(this.olvColumn2);
-            this.olvMovies.AllColumns.Add(this.olvColumn3);
+            this.olvMovies.AllColumns.Add(this.olvColumnTitle);
+            this.olvMovies.AllColumns.Add(this.olvColumnYear);
+            this.olvMovies.AllColumns.Add(this.olvColumnTrailerExists);
             this.olvMovies.AlternateRowBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(210)))), ((int)(((byte)(210)))));
             this.olvMovies.BackColor = System.Drawing.SystemColors.Window;
             this.olvMovies.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.olvMovies.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvColumn1,
-            this.olvColumn2,
-            this.olvColumn3});
+            this.olvColumnTitle,
+            this.olvColumnYear,
+            this.olvColumnTrailerExists});
+            this.olvMovies.ContextMenuStrip = this.olvContextMenu;
             this.olvMovies.Dock = System.Windows.Forms.DockStyle.Left;
             this.olvMovies.EmptyListMsg = "There are currently no movies to display. Please define your collections in the a" +
                 "pplication settings.";
@@ -79,29 +86,62 @@
             this.olvMovies.UseExplorerTheme = true;
             this.olvMovies.View = System.Windows.Forms.View.Details;
             // 
-            // olvColumn1
+            // olvColumnTitle
             // 
-            this.olvColumn1.AspectName = "Title";
-            this.olvColumn1.FillsFreeSpace = true;
-            this.olvColumn1.Text = "Title";
-            this.olvColumn1.UseInitialLetterForGroup = true;
-            this.olvColumn1.Width = 150;
+            this.olvColumnTitle.AspectName = "Title";
+            this.olvColumnTitle.FillsFreeSpace = true;
+            this.olvColumnTitle.Text = "Title";
+            this.olvColumnTitle.UseInitialLetterForGroup = true;
+            this.olvColumnTitle.Width = 150;
             // 
-            // olvColumn2
+            // olvColumnYear
             // 
-            this.olvColumn2.AspectName = "Year";
-            this.olvColumn2.MaximumWidth = 38;
-            this.olvColumn2.MinimumWidth = 38;
-            this.olvColumn2.Text = "Year";
-            this.olvColumn2.Width = 38;
+            this.olvColumnYear.AspectName = "Year";
+            this.olvColumnYear.MaximumWidth = 38;
+            this.olvColumnYear.MinimumWidth = 38;
+            this.olvColumnYear.Text = "Year";
+            this.olvColumnYear.Width = 38;
             // 
-            // olvColumn3
+            // olvColumnTrailerExists
             // 
-            this.olvColumn3.AspectName = "TrailerExists";
-            this.olvColumn3.MaximumWidth = 46;
-            this.olvColumn3.MinimumWidth = 46;
-            this.olvColumn3.Text = "Trailer";
-            this.olvColumn3.Width = 46;
+            this.olvColumnTrailerExists.AspectName = "TrailerExists";
+            this.olvColumnTrailerExists.MaximumWidth = 46;
+            this.olvColumnTrailerExists.MinimumWidth = 46;
+            this.olvColumnTrailerExists.Text = "Trailer";
+            this.olvColumnTrailerExists.Width = 46;
+            // 
+            // olvContextMenu
+            // 
+            this.olvContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemFetch,
+            this.playTrailerToolStripMenuItem,
+            this.deleteTrailerToolStripMenuItem});
+            this.olvContextMenu.Name = "olvContextMenu";
+            this.olvContextMenu.Size = new System.Drawing.Size(180, 70);
+            // 
+            // menuItemFetch
+            // 
+            this.menuItemFetch.Image = global::TrailBlazerReloaded.Properties.Resources.Down_32;
+            this.menuItemFetch.Name = "menuItemFetch";
+            this.menuItemFetch.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.menuItemFetch.Size = new System.Drawing.Size(179, 22);
+            this.menuItemFetch.Text = "Fetch Trailer";
+            this.menuItemFetch.Click += new System.EventHandler(this.menuItemFetch_Click);
+            // 
+            // playTrailerToolStripMenuItem
+            // 
+            this.playTrailerToolStripMenuItem.Image = global::TrailBlazerReloaded.Properties.Resources.Play_32;
+            this.playTrailerToolStripMenuItem.Name = "playTrailerToolStripMenuItem";
+            this.playTrailerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.playTrailerToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.playTrailerToolStripMenuItem.Text = "Play Trailer";
+            // 
+            // deleteTrailerToolStripMenuItem
+            // 
+            this.deleteTrailerToolStripMenuItem.Name = "deleteTrailerToolStripMenuItem";
+            this.deleteTrailerToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
+            this.deleteTrailerToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.deleteTrailerToolStripMenuItem.Text = "Delete Trailer";
             // 
             // actionsPanel
             // 
@@ -116,16 +156,20 @@
             // 
             // btnFetchAll
             // 
+            this.btnFetchAll.Image = global::TrailBlazerReloaded.Properties.Resources.Down_32;
+            this.btnFetchAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFetchAll.Location = new System.Drawing.Point(117, 10);
             this.btnFetchAll.Name = "btnFetchAll";
             this.btnFetchAll.Size = new System.Drawing.Size(100, 60);
             this.btnFetchAll.TabIndex = 1;
             this.btnFetchAll.Text = "Fetch All";
+            this.btnFetchAll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFetchAll.UseVisualStyleBackColor = true;
             this.btnFetchAll.Click += new System.EventHandler(this.btnFetchAll_Click);
             // 
             // btnRefreshCollection
             // 
+            this.btnRefreshCollection.Image = global::TrailBlazerReloaded.Properties.Resources.Refresh_32;
             this.btnRefreshCollection.Location = new System.Drawing.Point(10, 10);
             this.btnRefreshCollection.Name = "btnRefreshCollection";
             this.btnRefreshCollection.Size = new System.Drawing.Size(100, 60);
@@ -182,14 +226,15 @@
             // onlineHelpToolStripMenuItem
             // 
             this.onlineHelpToolStripMenuItem.Name = "onlineHelpToolStripMenuItem";
-            this.onlineHelpToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.onlineHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.onlineHelpToolStripMenuItem.Text = "Online Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // apiTextBox
             // 
@@ -217,9 +262,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuMain;
             this.Name = "Browser";
-            this.Text = "TrailBlazer Reloaded";
+            this.Text = "Trail Blazer Reloaded";
             this.Shown += new System.EventHandler(this.Browser_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.olvMovies)).EndInit();
+            this.olvContextMenu.ResumeLayout(false);
             this.actionsPanel.ResumeLayout(false);
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();
@@ -231,9 +277,9 @@
         #endregion
 
         private BrightIdeasSoftware.ObjectListView olvMovies;
-        private BrightIdeasSoftware.OLVColumn olvColumn1;
-        private BrightIdeasSoftware.OLVColumn olvColumn2;
-        private BrightIdeasSoftware.OLVColumn olvColumn3;
+        private BrightIdeasSoftware.OLVColumn olvColumnTitle;
+        private BrightIdeasSoftware.OLVColumn olvColumnYear;
+        private BrightIdeasSoftware.OLVColumn olvColumnTrailerExists;
         private System.Windows.Forms.Panel actionsPanel;
         private System.Windows.Forms.Button btnRefreshCollection;
         private System.Windows.Forms.MenuStrip menuMain;
@@ -245,6 +291,10 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.TextBox apiTextBox;
         private System.Windows.Forms.Button btnFetchAll;
+        private System.Windows.Forms.ContextMenuStrip olvContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem menuItemFetch;
+        private System.Windows.Forms.ToolStripMenuItem playTrailerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteTrailerToolStripMenuItem;
     }
 }
 

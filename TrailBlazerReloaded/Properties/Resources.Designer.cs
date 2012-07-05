@@ -60,6 +60,13 @@ namespace TrailBlazerReloaded.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap about {
+            get {
+                object obj = ResourceManager.GetObject("about", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap bgMain {
             get {
                 object obj = ResourceManager.GetObject("bgMain", resourceCulture);
@@ -67,9 +74,72 @@ namespace TrailBlazerReloaded.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Document_32 {
+            get {
+                object obj = ResourceManager.GetObject("Document_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Down_32 {
+            get {
+                object obj = ResourceManager.GetObject("Down_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap film_reel_icon {
+            get {
+                object obj = ResourceManager.GetObject("film_reel_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap film_strip_icon {
+            get {
+                object obj = ResourceManager.GetObject("film_strip_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Play_32 {
+            get {
+                object obj = ResourceManager.GetObject("Play_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Refresh_32 {
+            get {
+                object obj = ResourceManager.GetObject("Refresh_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Save_32 {
+            get {
+                object obj = ResourceManager.GetObject("Save_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap splash {
             get {
                 object obj = ResourceManager.GetObject("splash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Star_32 {
+            get {
+                object obj = ResourceManager.GetObject("Star_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Tool_32 {
+            get {
+                object obj = ResourceManager.GetObject("Tool_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

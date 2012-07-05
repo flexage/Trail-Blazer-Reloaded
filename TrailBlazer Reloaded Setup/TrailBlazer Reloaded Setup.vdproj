@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_2D026385B2EF74F3D7158A17912F047F"
+        "MsmKey" = "8:_1707A099EE647EB81DD27B6B16AED15E"
         "OwnerKey" = "8:_32310F419432444B889F3C399F030455"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -27,31 +27,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6EBA905847E67011696AD981468C00FC"
+        "MsmKey" = "8:_3D3A01A9F84E777624D798664AF3D02A"
         "OwnerKey" = "8:_32310F419432444B889F3C399F030455"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7B1D0A7913F94075A5503A86A7843565"
+        "MsmKey" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_982A1684D2701EE7C8A0019219097EF4"
+        "MsmKey" = "8:_6E3B6825697249F6E694D006D4030384"
         "OwnerKey" = "8:_32310F419432444B889F3C399F030455"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_982A1684D2701EE7C8A0019219097EF4"
-        "OwnerKey" = "8:_6EBA905847E67011696AD981468C00FC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+        "MsmKey" = "8:_74512E584D3D4157B3B7B422A50FAF4F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -63,8 +57,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2D026385B2EF74F3D7158A17912F047F"
+        "MsmKey" = "8:_D827552E28E319D3B02DBC5153B8821C"
+        "OwnerKey" = "8:_32310F419432444B889F3C399F030455"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D827552E28E319D3B02DBC5153B8821C"
+        "OwnerKey" = "8:_1707A099EE647EB81DD27B6B16AED15E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,13 +76,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6EBA905847E67011696AD981468C00FC"
+        "OwnerKey" = "8:_1707A099EE647EB81DD27B6B16AED15E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_982A1684D2701EE7C8A0019219097EF4"
+        "OwnerKey" = "8:_D827552E28E319D3B02DBC5153B8821C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3D3A01A9F84E777624D798664AF3D02A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_6E3B6825697249F6E694D006D4030384"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -103,6 +115,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -119,6 +152,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -148,45 +189,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2D026385B2EF74F3D7158A17912F047F"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ObjectListView, Version=2.5.0.2604, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_2D026385B2EF74F3D7158A17912F047F"
-                    {
-                    "Name" = "8:ObjectListView.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:ObjectListView.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_9F1DB95ACCAC47E4A12796BA8291E234"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6EBA905847E67011696AD981468C00FC"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1707A099EE647EB81DD27B6B16AED15E"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:WatTmdb, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6EBA905847E67011696AD981468C00FC"
+                    "_1707A099EE647EB81DD27B6B16AED15E"
                     {
                     "Name" = "8:WatTmdb.dll"
                     "Attributes" = "3:512"
@@ -210,40 +220,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7B1D0A7913F94075A5503A86A7843565"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\Trail Blazer - Movie Trailer App\\TrailBlazer Artwork\\TrailBlazer Reloaded\\TrailBlazer Reloaded - Installer Splash.bmp"
-            "TargetName" = "8:TrailBlazer Reloaded - Installer Splash.bmp"
-            "Tag" = "8:"
-            "Folder" = "8:_9F1DB95ACCAC47E4A12796BA8291E234"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_982A1684D2701EE7C8A0019219097EF4"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3D3A01A9F84E777624D798664AF3D02A"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:RestSharp, Version=103.1.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ObjectListView, Version=2.5.0.2604, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_982A1684D2701EE7C8A0019219097EF4"
+                    "_3D3A01A9F84E777624D798664AF3D02A"
                     {
-                    "Name" = "8:RestSharp.dll"
+                    "Name" = "8:ObjectListView.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:RestSharp.dll"
+            "SourcePath" = "8:ObjectListView.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9F1DB95ACCAC47E4A12796BA8291E234"
@@ -261,9 +251,9 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A91546B2ABE948F0B5D548EFC65BFA7C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4240C7ABA1124C0DB71B0ACC99CD943C"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\Trail Blazer - Movie Trailer App\\TrailBlazer Artwork\\TrailBlazer Reloaded\\TrailBlazer Reloaded - Installer Banner.bmp"
+            "SourcePath" = "8:..\\..\\Artwork\\TrailBlazer Reloaded - Installer Banner.bmp"
             "TargetName" = "8:TrailBlazer Reloaded - Installer Banner.bmp"
             "Tag" = "8:"
             "Folder" = "8:_9F1DB95ACCAC47E4A12796BA8291E234"
@@ -277,7 +267,58 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:TRUE"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6E3B6825697249F6E694D006D4030384"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_6E3B6825697249F6E694D006D4030384"
+                    {
+                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_9F1DB95ACCAC47E4A12796BA8291E234"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_74512E584D3D4157B3B7B422A50FAF4F"
+            {
+            "SourcePath" = "8:..\\..\\Artwork\\TrailBlazer Reloaded - Installer Splash.bmp"
+            "TargetName" = "8:TrailBlazer Reloaded - Installer Splash.bmp"
+            "Tag" = "8:"
+            "Folder" = "8:_9F1DB95ACCAC47E4A12796BA8291E234"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
@@ -299,6 +340,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D827552E28E319D3B02DBC5153B8821C"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:RestSharp, Version=103.1.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_D827552E28E319D3B02DBC5153B8821C"
+                    {
+                    "Name" = "8:RestSharp.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:RestSharp.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_9F1DB95ACCAC47E4A12796BA8291E234"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -358,7 +430,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TrailBlazer Reloaded"
         "ProductCode" = "8:{704E660D-3B8E-4381-938A-C572E3407236}"
-        "PackageCode" = "8:{442A075A-49AC-40CB-A165-3F944B03523B}"
+        "PackageCode" = "8:{2A132AC5-0BBA-4A38-A3AA-6D57184E7E06}"
         "UpgradeCode" = "8:{F7622025-FA9F-4239-85BF-54A1B687C2EF}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -540,7 +612,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+                            "Value" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "InstallAllUsersVisible"
@@ -576,7 +648,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+                            "Value" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"
@@ -625,7 +697,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:0"
                             "Setting" = "3:2"
-                            "Value" = "8:_7B1D0A7913F94075A5503A86A7843565"
+                            "Value" = "8:_74512E584D3D4157B3B7B422A50FAF4F"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "Sunken"
@@ -661,7 +733,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+                            "Value" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -693,7 +765,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+                            "Value" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "ShowProgress"
@@ -738,7 +810,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+                            "Value" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -776,7 +848,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+                            "Value" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -799,7 +871,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:0"
                             "Setting" = "3:2"
-                            "Value" = "8:_7B1D0A7913F94075A5503A86A7843565"
+                            "Value" = "8:_74512E584D3D4157B3B7B422A50FAF4F"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "Sunken"
@@ -835,7 +907,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+                            "Value" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
                             "UsePlugInResources" = "11:TRUE"
                             }
                         }
@@ -858,7 +930,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+                            "Value" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"
@@ -916,7 +988,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+                            "Value" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "ShowProgress"
@@ -961,7 +1033,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_A91546B2ABE948F0B5D548EFC65BFA7C"
+                            "Value" = "8:_4240C7ABA1124C0DB71B0ACC99CD943C"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "UpdateText"
@@ -989,7 +1061,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_32310F419432444B889F3C399F030455"
             {
-            "SourcePath" = "8:..\\TrailBlazerReloaded\\obj\\x86\\Release\\TrailBlazerReloaded.exe"
+            "SourcePath" = "8:..\\TrailBlazerReloaded\\obj\\x86\\Debug\\TrailBlazerReloaded.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9F1DB95ACCAC47E4A12796BA8291E234"
